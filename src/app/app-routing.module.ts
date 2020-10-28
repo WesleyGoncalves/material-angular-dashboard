@@ -7,6 +7,7 @@ import { ChartsComponent } from './pages/charts';
 import { ComponentsComponent } from './pages/components';
 import { DashboardComponent } from './pages/dashboard';
 import { Dashboard2Component } from './pages/dashboard2';
+import { EmptyPageComponent } from './pages/empty-page';
 import { FormsComponent } from './pages/forms';
 
 // @ts-ignore
@@ -23,6 +24,7 @@ import { FormsComponent } from './pages/forms';
           { path: 'forms', component: FormsComponent, pathMatch: 'full' },
           { path: 'charts', component: ChartsComponent, pathMatch: 'full' },
           { path: 'components', component: ComponentsComponent, pathMatch: 'full' },
+          { path: 'empty', component: EmptyPageComponent, pathMatch: 'full'},
           { path: '**', redirectTo: '/ypages/404' },
         ] }, // add 'canActivate: AuthGuard' for catching unauth users
         { path: 'ui', loadChildren: () => import('./pages/ui/ui.module').then(m => m.UIModule) },
